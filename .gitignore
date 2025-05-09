@@ -1,0 +1,6 @@
+# Arquivos de build do .NET
+bin/
+obj/
+*.user
+*.suo
+.vs/

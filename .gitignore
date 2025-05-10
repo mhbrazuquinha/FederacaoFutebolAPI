@@ -1,6 +1,8 @@
-# Arquivos de build do .NET
-bin/
-obj/
+# Build do .NET
+[Bb]in/
+[Oo]bj/
 *.user
 *.suo
-.vs/
+*.cache
+*.nupkg
+*.pdb

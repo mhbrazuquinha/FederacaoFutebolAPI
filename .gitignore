@@ -6,3 +6,4 @@
 *.cache
 *.nupkg
 *.pdb
+.fake

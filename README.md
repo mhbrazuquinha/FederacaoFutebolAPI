@@ -12,8 +12,8 @@ Uma API REST desenvolvida em ASP.NET Core com o objetivo de gerenciar federaçõ
 - C#
 
 👥 Integrantes da Dupla
-Nome Completo do Aluno 1 - mhbrazuquinha
-Nome Completo do Aluno 2 - lixolasgasoso
+Maria Helena Coelho - mhbrazuquinha
+Nicolas Ribeiro - lixolasgasoso
 
 🛠️ Tecnologias Utilizadas
 Linguagem: C# (.NET 8)

@@ -1,4 +1,4 @@
-### Federação Futebol API ⚽
+# Federação Futebol API ⚽
 
 Uma API REST desenvolvida em ASP.NET Core com o objetivo de gerenciar federações, times e campeonatos de futebol. Este projeto foi desenvolvido como parte da disciplina de C# da faculdade.
 

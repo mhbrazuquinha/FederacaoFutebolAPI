@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace src.Data.Migrations
+namespace FederacaoFutebolApi.Migrations
 {
     /// <inheritdoc />
     public partial class InitialCreate : Migration
@@ -18,10 +18,9 @@ namespace src.Data.Migrations
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Nome = table.Column<string>(type: "TEXT", maxLength: 100, nullable: false),
-                    CidadeOrigem = table.Column<string>(type: "TEXT", nullable: true),
                     DataCriacao = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    EscudoUrl = table.Column<string>(type: "TEXT", nullable: true),
-                    Titulos = table.Column<int>(type: "INTEGER", nullable: false)
+                    CidadeOrigem = table.Column<string>(type: "TEXT", maxLength: 100, nullable: true),
+                    UrlEscudo = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -35,10 +34,7 @@ namespace src.Data.Migrations
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Nome = table.Column<string>(type: "TEXT", maxLength: 100, nullable: false),
-                    Idade = table.Column<int>(type: "INTEGER", nullable: false),
-                    TimeId = table.Column<int>(type: "INTEGER", nullable: true),
-                    Posicao = table.Column<string>(type: "TEXT", nullable: true),
-                    NumeroCamisa = table.Column<int>(type: "INTEGER", nullable: false)
+                    TimeId = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -47,7 +43,8 @@ namespace src.Data.Migrations
                         name: "FK_Jogadores_Times_TimeId",
                         column: x => x.TimeId,
                         principalTable: "Times",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
